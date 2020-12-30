@@ -7,7 +7,7 @@ DONE:
 * Changed memory interaction method
 * Changed method of writing json config
 * Removed useless instructions and used another method to patch it
-* Added program check version in case of someone replace the exe and if the config doesn't have the version or its old that will auto update it.
+* Added program check version
 * Added different headers and an SDK file for replacing some basic function
 * Changed style of output and made it more clean with the process/memory info
 * Fixed a bug about the asynckeypressed function
