@@ -65,14 +65,14 @@ int main()
 		if (sdk::IsKeyPressed(enable)) {
 			uint8_t rax[] = { 0x48, 0xB8, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x90, 0x48, 0x8B, 0x32, 0x48, 0x85 };
 			uint8_t ret[] = { 0xC3 };
-			WriteProcessMemory(memory::handle, (LPVOID)(memory::base + 0x1B07990), rax, sizeof(rax), NULL);
-			WriteProcessMemory(memory::handle, (LPVOID)(memory::base + 0x1B07990), ret, sizeof(ret), NULL);
+			WriteProcessMemory(memory::handle, (LPVOID)(memory::base + 0x192220), rax, sizeof(rax), NULL);
+			WriteProcessMemory(memory::handle, (LPVOID)(memory::base + 0x192220), ret, sizeof(ret), NULL);
 
 			sdk::enabled(true);
 		}
 		else if (sdk::IsKeyPressed(disable)) {
 			uint8_t rax[] = { 0x41, 0x57, 0x41, 0x56, 0x56, 0x57, 0x53, 0x48, 0x83, 0xEC, 0x20, 0x48, 0x8B, 0x32, 0x48, 0x85 };
-			WriteProcessMemory(memory::handle, (LPVOID)(memory::base + 0x1B07990), rax, sizeof(rax), NULL);
+			WriteProcessMemory(memory::handle, (LPVOID)(memory::base + 0x192220), rax, sizeof(rax), NULL);
 
 			sdk::disabled(true);
 		}
